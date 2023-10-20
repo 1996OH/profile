@@ -1,1 +1,28 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>簡単なクリックゲーム</title>
+</head>
+<body>
+  <h1>クリック回数: <span id="clickCount">0</span></h1>
+  <button id="clickButton">クリックしてポイントを獲得</button>
+
+  <script>
+    // クリック回数をカウントする変数
+    let clickCount = 0;
+
+    // ボタン要素を取得
+    const clickButton = document.getElementById("clickButton");
+
+    // クリック時のイベントリスナーを追加
+    clickButton.addEventListener("click", () => {
+      // クリック回数を増やす
+      clickCount++;
+      
+      // クリック回数を表示する要素を更新
+      document.getElementById("clickCount").textContent = clickCount;
+    });
+  </script>
+</body>
+</html>
