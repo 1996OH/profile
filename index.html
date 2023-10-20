@@ -1,27 +1,37 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>簡単なクリックゲーム</title>
+  <title>数値入力ゲーム</title>
 </head>
 <body>
-  <h1>クリック回数: <span id="clickCount">0</span></h1>
-  <button id="clickButton">クリックしてポイントを獲得</button>
+  <h1>ゲームスコア: <span id="gameScore">0</span></h1>
+
+  <label for="userInput">数値を入力: </label>
+  <input type="number" id="userInput">
+  <button id="submitButton">スコアに追加</button>
 
   <script>
-    // クリック回数をカウントする変数
-    let clickCount = 0;
+    let gameScore = 0;
 
-    // ボタン要素を取得
-    const clickButton = document.getElementById("clickButton");
+    const gameScoreElement = document.getElementById("gameScore");
+    const userInput = document.getElementById("userInput");
+    const submitButton = document.getElementById("submitButton");
 
-    // クリック時のイベントリスナーを追加
-    clickButton.addEventListener("click", () => {
-      // クリック回数を増やす
-      clickCount++;
-      
-      // クリック回数を表示する要素を更新
-      document.getElementById("clickCount").textContent = clickCount;
+    submitButton.addEventListener("click", () => {
+      const inputValue = parseInt(userInput.value);
+
+      if (!isNaN(inputValue)) {
+        // 入力された数値をスコアに追加
+        gameScore += inputValue;
+
+        // スコアを表示する要素を更新
+        gameScoreElement.textContent = gameScore;
+
+        // 入力フィールドをクリア
+        userInput.value = '';
+      } else {
+        alert("有効な数値を入力してください");
+      }
     });
   </script>
 </body>
