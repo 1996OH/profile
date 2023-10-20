@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>数値入力ゲーム</title>
+  <title>自己紹介</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 20px;
+    }
+    
+    #profile {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    #profile img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
-  <h1>ゲームスコア: <span id="gameScore">0</span></h1>
+  <div id="header">
+    <h1>初めまして。私は[尾場瀬 浩之] です。</h1>
+  </div>
 
-  <label for="userInput">数値を入力: </label>
-  <input type="number" id="userInput">
-  <button id="submitButton">スコアに追加</button>
-
-  <script>
-    let gameScore = 0;
-
-    const gameScoreElement = document.getElementById("gameScore");
-    const userInput = document.getElementById("userInput");
-    const submitButton = document.getElementById("submitButton");
-
-    submitButton.addEventListener("click", () => {
-      const inputValue = parseInt(userInput.value);
-
-      if (!isNaN(inputValue)) {
-        // 入力された数値をスコアに追加
-        gameScore += inputValue;
-
-        // スコアを表示する要素を更新
-        gameScoreElement.textContent = gameScore;
-
-        // 入力フィールドをクリア
-        userInput.value = '';
-      } else {
-        alert("有効な数値を入力してください");
-      }
-    });
-  </script>
+  <div id="profile">
+    <p>現在の住所: [埼玉県]</p>
+    <p>趣味: [ドライブ、ゲーム、麻雀、猫]</p>
+    <p>自己紹介: [開発エンジニアを目指して勉強中。]</p>
+  </div>
 </body>
 </html>
