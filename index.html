@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>自己紹介</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    
-    #header {
-      background-color: #3498db;
-      color: #fff;
-      padding: 20px;
-    }
-    
-    #profile {
-      max-width: 400px;
-      margin: 20px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    #profile img {
-      max-width: 100%;
-      border-radius: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尾場瀬浩之の自己紹介</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7DBA38; / 緑の背景色 /
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px; / 角丸の設定 /
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .servlet-space {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0; / スペースの背景色 /
+            border-radius: 10px; / スペースの角丸設定 /
+        }
+    </style>
 </head>
 <body>
-  <div id="header">
-    <h1>初めまして。私は[尾場瀬 浩之] です。</h1>
-  </div>
+    <header>
+        <h1>尾場瀬浩之の自己紹介</h1>
+    </header>
+    <div class="container">
+        <h1>基本情報</h1>
+        <p>名前: 尾場瀬 浩之</p>
+        <p>居住地: 埼玉県</p>
+        <p>趣味: ドライブ、ゲーム、麻雀、猫</p>
+        
+        <h1>経歴</h1>
+        <p>教育学部教育学科卒業</p>
+        <p>不動産管理会社で1年間勤務</p>
+        <p>トラックドライバーとして2年間の経験</p>
+        <p>2022年12月 株式会社ITPM入社</p>
 
-  <div id="profile">
-    <p>現在の住所: [埼玉県]</p>
-    <p>趣味: [ドライブ、ゲーム、麻雀、猫]</p>
-    <p>自己紹介: [開発エンジニアを目指して勉強中。]</p>
-  </div>
+        <div class="servlet-space">
+    <h2>パスワード生成</h2>
+    <form action="PasswordGeneratorServlet" method="post">
+        <label for="number">数字を入力してください:</label>
+        <input type="text" id="number" name="number">
+        <input type="submit" value="生成">
+    </form>
+    <p>生成されたパスワード: <span id="generatedPassword"></span></p>
+</div>
+    </div>
 </body>
 </html>
