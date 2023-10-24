@@ -1,70 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>尾場瀬浩之の自己紹介</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #7DBA38; / 緑の背景色 /
-        }
-        header {
-            background-color: #007BFF;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px; / 角丸の設定 /
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            font-size: 24px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .servlet-space {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f0f0f0; / スペースの背景色 /
-            border-radius: 10px; / スペースの角丸設定 /
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>尾場瀬浩之の自己紹介</h1>
-    </header>
-    <div class="container">
-        <h1>基本情報</h1>
-        <p>名前: 尾場瀬 浩之</p>
-        <p>居住地: 埼玉県</p>
-        <p>趣味: ドライブ、ゲーム、麻雀、猫</p>
-        
-        <h1>経歴</h1>
-        <p>教育学部教育学科卒業</p>
-        <p>不動産管理会社で1年間勤務</p>
-        <p>トラックドライバーとして2年間の経験</p>
-        <p>2022年12月 株式会社ITPM入社</p>
+<html lang="ja">
+ <head>
+   <meta charset="utf-8">
+   <title>MyProfile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+ </head>
 
-        <div class="servlet-space">
-    <h2>パスワード生成</h2>
-    <form action="PasswordGeneratorServlet" method="post">
-        <label for="number">数字を入力してください:</label>
-        <input type="text" id="number" name="number">
-        <input type="submit" value="生成">
-    </form>
-    <p>生成されたパスワード: <span id="generatedPassword"></span></p>
-</div>
-    </div>
-</body>
+  <body>
+    <header>
+      <h1 class="site-title"><a href="index.html"><img src="ここに写真を追加" ="logoProfile"></a></h1>
+      <nav>
+        <ul>
+          <li><a href="#Profile">Profile</a></li>
+          <li><a href="#Production">Production</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id = "mainPhoto">
+      <img src = "ここに写真を追加" alt = "尾場瀬 浩之">
+      </div>
+
+      <section id ="Profile" class ="wrapper">
+        <h2 class="section-title">About</h2>
+        <div class="content">
+          <img src="img/about.jpg" alt="テキストテキストテキスト">
+          <div class="text">
+            <h3 class="content-title">Hiroyuki Obase</h3>
+            <p>ここに自己紹介を入力</p>
+          </div>
+        </div>
+      </section>
+
+      <section id ="Production" class ="wrapper">
+        <h2 class="section-title">Bicycle</h2>
+          <ul>
+            <li>
+              <img src="ここに写真を追加" alt ="ここに写真を追加">
+              <h3 class="content-title">パスワード生成</h3>
+              <p>ここに文章を追加</p>
+            </li>
+            <li>
+              <img src="ここに写真を追加">
+              <h3 class="content-title">じゃんけんゲーム</h3>
+              <p>ここに文章を追加</p>
+            </li>
+            <li>
+              <img src="ここに写真を追加">
+              <h3 class="content-title">ボードゲーム</h3>
+              <p>ここに文章を追加</p>
+            </li>
+          </ul>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>2023 Profile</p>
+    </footer>
+
+  </body>
+
+
 </html>
