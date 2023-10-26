@@ -66,12 +66,12 @@ li {
 }
 
 /*-------------------------------------------
-Mainvisual
+mainPhoto
 -------------------------------------------*/
-#mainvisual {
+#mainPhoto {
   margin-bottom: 80px;
 }
-#mainvisual img {
+#mainPhoto img {
   width: 100%;
   max-width: 1920px;
   height: 600px;
@@ -122,9 +122,9 @@ SP
 @media screen and (max-width: 600px) {
 
   /*-------------------------------------------
-  Mainvisual
+  mainPhoto
   -------------------------------------------*/
-  #mainvisual img {
+  #mainPhoto img {
     height: calc(100vh - 60px);
   }
 
