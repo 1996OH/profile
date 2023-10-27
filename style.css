@@ -98,13 +98,13 @@ myProfile
 }
 
 /*-------------------------------------------
-Production
+Works
 -------------------------------------------*/
-#Production ul {
+#Works ul {
   display: flex;
   justify-content: space-between;
 }
-#Production li {
+#Works li {
   width: 32%;
 }
 
