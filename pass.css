@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  background-color:#eafcca;
+  color: #383e45;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.site-title {
+  width: 120px;
+  line-height: 1px;
+  padding: 10px 0;
+}
+.site-title a {
+  display: block;
+}
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px #383e45;
+}
+.content-title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+/*-------------------------------------------
+PassMainPhoto
+-------------------------------------------*/
+#PassMainPhoto {
+  margin-bottom: 80px;
+}
+#PassMainPhoto img {
+  width: 100%;
+  max-width: 1920px;
+  height: 450px;
+  object-fit: cover;
+}
+/*-------------------------------------------
+comment
+-------------------------------------------*/
+#comment .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#comment img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#comment .text {
+  text-align: left;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  font-size: 0.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+  /*-------------------------------------------
+  mainPhoto
+  -------------------------------------------*/
+  #mainPhoto img {
+    height: calc(100vh - 100px);
+  }
+
+  /*-------------------------------------------
+  comment
+  -------------------------------------------*/
+  #comment .content {
+    flex-direction: column;
+  }
+  #comment img {
+    margin-right: 0;
+  }
+}

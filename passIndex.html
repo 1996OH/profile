@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
  <head>
@@ -7,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="icon.jpg">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pass.css">
  </head>
 <body>
- <header>
+ <header id="header" class="wrapper">
       <h1 class="site-title"><a href="index.html"><img src="logoProfile.jpg"></a></h1>
       <nav>
         <ul>
@@ -26,8 +27,79 @@
       <img src = "PassMainPhoto.jpg" >
       </div>
 
-  <h1>製作中・・・・</h1>
+      <section id ="comment" class ="wrapper">
+        <h2 class="section-title">パスワード生成</h2>
+        <div class="content">
+          <img src="PhotoMe.jpg">
+          <div class="text">
+            <p>初めてのJavaを使って実行ができるプログラムを作りました。<br>
+               <br>
+               ◆作成した時の流れ<br>
+               始めにパスワードには大文字、小文字、数字、記号が必要になると考え、すべてを使ってパスワードが生成されるように構成を考えました。<br>
+               次にパスワードの長さがWebなどで違うことに着目してパスワードの長さを任意のもので作成できるように考えました。<br>
+               <br>
+               作成したソースコードが以下の通りになっています。<br>
+               </p>
+          </div>
+        </div>
+      </section>
+
+      <section class ="wrapper">
+        <h1>ソースコード</h1>
+        <img src="Pass1.png">
+         <p>今回は初めての作成ということもあるのでクラスは1つで作成しました。<br>
+            それぞれの文字の種類を1つの配列に格納し、その中からfor文っを使って1文字ずつランダムに取り出していき、<br>
+            文字列に追加をしていく方法をとりました。
+         </p>
+      </section>
+
+      <section class ="wrapper">
+        <h2>実行</h2>
+        <img src="Pass2.png">
+         <p>実行していきます。</p>
+      </section>
+
+      <section class ="wrapper">
+        <h2>任意の数字を入力</h2>
+        <img src="Pass3.png">
+         <p>今回は試しに30桁のパスワードを作成していきます。</p>
+      </section>
+
+      <section class ="wrapper">
+        <h2>実行結果</h2>
+        <img src="Pass4.png">
+         <p>パスワードが無事生成されました！<br>
+            ある程度の桁数まで何度かテストして数万桁程度入力しても実行できました。</p>
+      </section>
+
+      <section id ="comment" class ="wrapper">
+        <h2 class="section-title">作成した感想</h2>
+        <div class="content">
+          <img src="PhotoMe.jpg">
+          <div class="text">
+            <p>簡単なパスワード生成のシステムだったのっで構成、制作には大体3時間程度でした。<br>
+               作成して問題なく動くことが確認できた時の達成感はとてもいいものですね。<br>
+               <br>
+               作り終えたときは完璧だと考えていたのですが、後から見直すといろいろな点で問題があることに気が付きました。<br>
+               １、確率は少ないが4種類の文字がすべて使われないで生成されてしまう可能性がある点<br>
+               ２、Webサイトによっては記号が不可、数字が不可など制限がある場合に対応できない点<br>
+               ３、Stringを何度も代入しなおしてためデータ使用効率が悪い。<br>
+                                     →StringBuilder型を使うべきだった？<br>
+               <br>
+               <br>
+               実行可能なプログラムは作成できているがまだまだ考えが浅かったり、見落としてしまっていることが多いのでもっと構成を考える時間を増やしていき、<br>
+               穴の少ないプログラムが作成できようになれるよう次回以降のプログラムで考えていこうかと思いました。
+               </p>
+
+          </div>
+        </div>
+      </section>
+
  </main>
- <footer>
- </footer>
+    <footer id="footer">
+      <p>2023 Profile</p>
+    </footer>
 </body>
+
+
+
