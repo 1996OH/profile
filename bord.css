@@ -73,49 +73,43 @@ li {
 #header li a:hover {
   opacity: 0.7;
 }
-
 /*-------------------------------------------
-mainPhoto
+bordmain
 -------------------------------------------*/
-#mainPhoto {
+#bordmain {
   margin-bottom: 80px;
 }
-#mainPhoto img {
+#bordmain img {
   width: 100%;
   max-width: 1920px;
   height: 600px;
   object-fit: cover;
 }
-
 /*-------------------------------------------
-myProfile
+comment
 -------------------------------------------*/
-#myProfile .content {
+#comment .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#myProfile img {
+#comment img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   margin-right: 30px;
 }
-#myProfile .text {
+#comment .text {
   text-align: left;
 }
-
 /*-------------------------------------------
-Works
+url
 -------------------------------------------*/
-#Works ul {
-  display: flex;
-  justify-content: space-between;
+#url {
+  font-size: 1rem;
+  padding: 10px 0;
+  text-align: center;
 }
-#Works li {
-  width: 32%;
-}
-
 /*-------------------------------------------
 footer
 -------------------------------------------*/
@@ -124,7 +118,6 @@ footer
   padding: 10px 0;
   text-align: center;
 }
-
 /*-------------------------------------------
 SP
 -------------------------------------------*/
@@ -138,23 +131,43 @@ SP
   }
 
   /*-------------------------------------------
-  myProfile
+  comment
   -------------------------------------------*/
-  #myProfile .content {
+  #comment .content {
     flex-direction: column;
   }
-  #myProfile img {
+  #comment img {
     margin-right: 0;
   }
-
+}
   /*-------------------------------------------
-  Production
+ ふきだし
   -------------------------------------------*/
-  #Production ul {
-    flex-direction: column;
-  }
-  #Production li {
-    width: 100%;
-    margin-bottom: 30px;
-  }
+.balloon1-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #66e1e6;
+  border-radius: 8%;
+}
+
+.balloon1-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #66e1e6;
+}
+
+.balloon1-left p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }

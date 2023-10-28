@@ -82,7 +82,7 @@ PassMainPhoto
 #PassMainPhoto img {
   width: 100%;
   max-width: 1920px;
-  height: 450px;
+  height: 600px;
   object-fit: cover;
 }
 /*-------------------------------------------

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="icon.jpg">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bord.css">
  </head>
 <body>
- <header>
-      <h1 class="site-title"><a href="index.html"><img src="logoProfile.jpg"></a></h1>
+ <header id="header" class="wrapper">
+      <h1 class="site-title"><a href="index.html"><img src="photo/logoProfile.jpg"></a></h1>
       <nav>
         <ul>
           <li><a href="index.html">TOP</a></li>
@@ -22,12 +22,165 @@
  </header>
 
  <main>
-      <div id = "BordMainPhoto">
-      <img src = "BordMainPhoto.jpg" >
-      </div>
+  <div id = "bordmain">
+  <img src = "photo/bordmain.jpg" >
+  </div>
 
-  <h1>製作中・・・・</h1>
- </main>
- <footer>
- </footer>
+  <section id ="comment" class ="wrapper">
+    <h2 class="section-title">じゃんけんゲーム</h2>
+    <div class="content">
+      <div class="text">
+        <p><br>
+          ◆環境・・・Eclipse<br>
+          ◆言語・・・Java<br>
+          ◆制作理由・・・前回よりも規模が大きく一からゲームを考えようと考えたため。<br>
+           <br>
+          ◆作成した時の流れ<br>
+          1, すごろくゲームを構想。クラスをいくつに分けるかを考える。<br>
+          2, 各クラスの役割を決めてそれぞれの繋がり方っを構想。<br>
+          3, ゲームの詳細な設定を決定。<br>
+          4, ソースコードの書き込み<br>
+          5, デバッグと修正<br>
+        </p>
+         <br>
+         <br>
+          <h1>ゲーム設定</h1>
+          <p>◆キャラクター名は自由でプレイ人数は3人<br>
+          ◆マップの長さとイベントの場所はプレイするたびに変わる<br>
+          ◆誰かがゴールするとゲーム終了<br>
+          ◆キャラクター作成時にジョブと持ち金とエフェクト（移動力・持ち金増減）が付与される<br>
+          ◆キャラ一人に対してアイテムを一つ持てる<br>
+          ◆持ち金はマイナスになってもOK
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <section class ="wrapper">
+    <h1>1, Mainクラス</h1>
+    <img src="photo/main.png">
+    <p>Mainクラスで主にゲームの進行するように作成しました。<br>
+       characterクラスでキャラクターを生成し<br>
+       characterクラスに渡すゲームマップを作成するようにしました。<br>
+       ターン進行中にゴールに到着したときに処理を止めて結果発表に移るようになっています。<br>
+   </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>2, characterクラス</h2>
+    <img src="photo/Character1.png">
+    <img src="photo/Character2.png">
+    <p>characterクラスでは主にMainクラスからもらったマップを使って<br>
+       ゲームを進めてイベントをこなしていくように作成しました。<br>
+       このクラスから他のクラスを呼び出し、イベントを発生させていきます。<br>
+   </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>3,Mapクラス</h2>
+    <img src="photo/Map.png">
+     <p>MapクラスではMeinクラスからゲーム開始時に呼び出され<br>
+        マップのマス数と各マスのイベント番号を決めて配列で返すようにしました。<br>
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>4,Jobクラス</h2>
+    <img src="photo/Job.png">
+     <p>Jobクラスはキャラ作成時にcharacterクラスから呼び出されます。<br>
+        呼び出されるとcharacterのジョブを決定します。<br>
+        ジョブの決定と同時にそれぞれのジョブに振り分けたエフェクトをキャラクタークラスに登録します。<br>
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>5,Eventクラス</h2>
+    <img src="photo/Event.png">
+     <p>eventクラスでは各マップに設定されているイベント番号に従って<br>
+        イベントの種類を決定します。<br>
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>6,Itemクラス</h2>
+    <img src="photo/Item.png">
+     <p>Itemクラスはイベントの中の一つでアイテム交換のイベントが発生した場合に呼び出されます。<br>
+        呼び出されると移動力または持ち金取得量の増減を決めるアイテムが付与されるようになっています。<br>
+        それぞれの増減の数値はランダムになっており、<br>
+        数値によってイベントの文言が変わるように設定されています。<br>
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>7,moneyEventクラス</h2>
+    <img src="photo/moneyEvent.png">
+     <p>moneyEventクラスは持ち金の増減が発生した場合に<br>
+        金額によって変わるイベント内容が表示されます。<br>
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>8,実行</h2>
+    <img src="photo/bord1.png">
+     <p>実行していきます。
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>9,キャラクターの名前を決定</h2>
+    <img src="photo/bord2.png">
+     <p>今回はそれぞれ「桃太郎」「浦島太郎」「金太郎」と名づけます。<br>
+        名前を入力するとそれぞれの職業と所持金を決めます。<br>
+        表示には出していませんがそれぞれ移動できるマップ＋αと持ち金＋αのエフェクトも与えられています。
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>10,ゲーム進行</h2>
+    <img src="photo/bord3.png">
+     <p>今回は名前を決定するとゲーム終了まで進めるようにしました。<br>
+        各キャラクターのターンごとにまとまって見やすくしてみました。<br>
+        ターン数の表示も一度ずついれることで進行具合も分かりやすいようにしました。
+     </p>
+  </section>
+
+  <section class ="wrapper">
+    <h2>11,ゲーム終了</h2>
+    <img src="photo/bord4.png">
+     <p>誰かがMapクラスで作成したマス数を超えると中断し結果発表が始まります。<br>
+        結果発表ではすべてのキャラクターの持ち金を表示させて<br>
+        その中でも一番高い金額を持っている人が勝ちとなります。<br>
+        これでゲーム終了です。
+     </p>
+  </section>
+
+ <section id ="comment" class ="wrapper">
+  <h2 class="section-title">作成した感想</h2>
+  <div class="content">
+    <img src="photo/PhotoMe.jpg">
+    <div class="balloon1-left" >
+      <p>◆今回の構成、制作には大体20時間程度でした。<br>
+         初めてクラス分けを行ってそれぞれの繋がり方を考えて作成しました。<br>
+         作っている途中でもアイディアが思いついてしまい時間がかかってしまった気がします。<br>
+         <br>
+         ◆今回は見直す点、もっとよくできる点が多くあったかなと感じています。<br>
+         1, Mainクラスに詰め込みすぎているためもっとクラス分けが必要。<br>
+         2, characterクラスでもイベントなどを別のクラスに分けることができる内容だと思いました。<br>
+         3, 持ち金数をランダムにするのはいいが、四捨五入して行ったほうがプレイする側が見やすくなる。<br>
+         <br>
+         ◆自分がいいから考えるゲームとしては思っていたよりもうまくできていたと思いました。<br>
+         ですが、添削をしていただきまだまだ改善点が多く、課題は山積みだと感じました…。<br>
+         実行まではスムーズに進みましたがデバッグをしていると矛盾が発生したりイベント内容が<br>
+         ループしてしまったり、結果発表が正常に表示されなかったりと正常に実行できるまでは大変でした。
+         </p>
+
+    </div>
+  </div>
+</section>
+<p id="url"><a href="https://github.com/ObaseHiroyuki/BordGame">ソースコードの確認はこちら</a></p>
+
+</main>
+<footer id="footer">
+<p>2023 Profile</p>
+</footer>
 </body>
