@@ -93,12 +93,6 @@ comment
   justify-content: center;
   align-items: center;
 }
-#comment img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-right: 30px;
-}
 #comment .text {
   text-align: left;
 }
@@ -136,39 +130,5 @@ SP
   #comment .content {
     flex-direction: column;
   }
-  #comment img {
-    margin-right: 0;
-  }
 }
-  /*-------------------------------------------
- ふきだし
-  -------------------------------------------*/
-  .balloon1-left {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 0 1.5em 15px;
-    padding: 7px 10px;
-    min-width: 120px;
-    max-width: 100%;
-    color: #555;
-    font-size: 16px;
-    background: #66e1e6;
-    border-radius: 8%;
-  }
-  
-  .balloon1-left:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    margin-top: -15px;
-    border: 15px solid transparent;
-    border-right: 15px solid #66e1e6;
-  }
-  
-  .balloon1-left p {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-  }
   
