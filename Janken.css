@@ -7,6 +7,24 @@ body {
   background-color:#eafcca;
   color: #383e45;
   font-size: 0.9rem;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+	animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
 }
 a {
   text-decoration: none;
@@ -67,6 +85,10 @@ li {
 #header li {
   margin-left: 30px;
 }
+#header li:hover{
+  cursor: pointer;
+	transform: scale(1.2);
+}
 #header li a {
   color: #24292e;
 }
@@ -100,9 +122,13 @@ comment
 url
 -------------------------------------------*/
 #url {
-  font-size: 1rem;
+  font-size: 12px;
   padding: 10px 0;
   text-align: center;
+}
+#url:hover{
+  cursor: pointer;
+	transform: scale(1.2);
 }
 /*-------------------------------------------
 footer

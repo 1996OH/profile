@@ -7,6 +7,24 @@ body {
   background-color:#eafcca;
   color: #383e45;
   font-size: 0.9rem;
+  -webkit-animation: fadeIn 2s ease 0s 1 normal;
+	animation: fadeIn 2s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
 }
 a {
   text-decoration: none;
@@ -59,6 +77,7 @@ li {
   max-width: 1920px;
   background-color:rgba(57, 182, 41, 0.8);
   font-weight: bold;
+  z-index: 2;
 }
 #header ul {
   display: flex;
@@ -66,6 +85,10 @@ li {
 }
 #header li {
   margin-left: 30px;
+}
+#header li:hover{
+  cursor: pointer;
+	transform: scale(1.2);
 }
 #header li a {
   color: #24292e;
@@ -85,6 +108,7 @@ mainPhoto
   max-width: 1920px;
   height: 600px;
   object-fit: cover;
+  z-index: 1;
 }
 
 /*-------------------------------------------
@@ -104,7 +128,14 @@ myProfile
 #myProfile .text {
   text-align: left;
 }
-
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 /*-------------------------------------------
 Works
 -------------------------------------------*/
