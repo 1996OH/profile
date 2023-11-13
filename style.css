@@ -200,18 +200,6 @@ SP
   #myProfile img {
     margin-right: 0;
   }
-  .profile {
-    margin-top: 4 rem;
-    margin-bottom : 4 rem;
-    background-color: beige;
-    width: 30rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-  }
-  .deteal {
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
-  }
   /*-------------------------------------------
   Works
   -------------------------------------------*/
