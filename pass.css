@@ -104,7 +104,7 @@ PassMainPhoto
 #PassMainPhoto img {
   width: 100%;
   max-width: 1920px;
-  height: 600px;
+  max-height: 450px;
   object-fit: cover;
 }
 /*-------------------------------------------
@@ -138,23 +138,3 @@ footer
   padding: 10px 0;
   text-align: center;
 }
-/*-------------------------------------------
-SP
--------------------------------------------*/
-@media screen and (max-width: 600px) {
-
-  /*-------------------------------------------
-  mainPhoto
-  -------------------------------------------*/
-  #mainPhoto img {
-    height: calc(100vh - 100px);
-  }
-
-  /*-------------------------------------------
-  comment
-  -------------------------------------------*/
-  #comment .content {
-    flex-direction: column;
-  }
-}
-  
