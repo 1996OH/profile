@@ -76,6 +76,7 @@ li {
   max-width: 1920px;
   background-color:rgba(57, 182, 41, 0.8);
   font-weight: bold;
+  height : 55px;
 }
 #header ul {
   display: flex;
@@ -98,6 +99,7 @@ li {
 bordmain
 -------------------------------------------*/
 #bordmain {
+  margin-top: 55px;
   margin-bottom: 80px;
 }
 #bordmain img {
@@ -140,4 +142,10 @@ footer
 /*-------------------------------------------
 SP
 -------------------------------------------*/
-
+@media screen and (max-width: 600px) {
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  #header a{
+    font-size: 12px;
+  }
