@@ -77,6 +77,7 @@ li {
   max-width: 1920px;
   background-color:rgba(57, 182, 41, 0.8);
   font-weight: bold;
+  height : 55px;
   z-index: 2;
 }
 #header ul {
@@ -101,6 +102,7 @@ li {
 mainPhoto
 -------------------------------------------*/
 #mainPhoto {
+  margin-top: 55px;
   margin-bottom: 80px;
 }
 #mainPhoto img {
@@ -175,6 +177,12 @@ Works
 SP
 -------------------------------------------*/
 @media screen and (max-width: 600px) {
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  #header a{
+    font-size: 12px;
+  }
   /*-------------------------------------------
   myProfile
   -------------------------------------------*/
