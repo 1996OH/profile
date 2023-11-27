@@ -149,3 +149,7 @@ SP
   #header a{
     font-size: 12px;
   }
+  #header li {
+    margin-left: 12px;
+  }
+}
