@@ -147,9 +147,9 @@ SP
   header
   -------------------------------------------*/
   #header a{
-    font-size: 12px;
+    font-size: 10px;
   }
   #header li {
-    margin-left: 12px;
+    margin-left: 10px;
   }
 }
