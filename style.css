@@ -147,8 +147,8 @@ Works
 }
 #Works li {
   width: 32%;
+  text-align: center;
 }
-
 .scale-img {
   border-radius: 6px;
   transition-duration: .5s;

@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #eafcca;
+    color: #383e45;
+    font-size: 0.9rem;
+    -webkit-animation: fadeIn 2s ease 0s 1 normal;
+    animation: fadeIn 2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.site-title {
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;
+}
+
+    .site-title a {
+        display: block;
+    }
+
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+
+.content-title {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+    background-color: #eafcca;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    background-color: rgba(57, 182, 41, 0.8);
+    font-weight: bold;
+    height: 55px;
+}
+
+    #header ul {
+        display: flex;
+        padding: 10px 0;
+    }
+
+    #header li {
+        margin-left: 30px;
+    }
+
+        #header li:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        #header li a {
+            color: #24292e;
+        }
+
+            #header li a:hover {
+                opacity: 0.7;
+            }
+/*-------------------------------------------
+PhotoMiniGame
+-------------------------------------------*/
+#PhotoMiniGame {
+    margin-top: 55px;
+    margin-bottom: 80px;
+}
+
+    #PhotoMiniGame img {
+        width: 100%;
+        max-width: 1920px;
+        max-height: 450px;
+        object-fit: cover;
+    }
+/*-------------------------------------------
+comment
+-------------------------------------------*/
+#comment .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#comment .text {
+    text-align: left;
+}
+/*-------------------------------------------
+url
+-------------------------------------------*/
+#url {
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    #url:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+    /*-------------------------------------------
+  header
+  -------------------------------------------*/
+    #header a {
+        font-size: 10px;
+    }
+
+    #header li {
+        margin-left: 10px;
+    }
+}
